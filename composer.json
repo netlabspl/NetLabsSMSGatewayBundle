@@ -1,0 +1,29 @@
+{
+    "name": "netlabs/sms-gateway-bundle",
+    "type": "symfony-bundle",
+    "description": "",
+    "keywords": ["sms", "netlabs"],
+    "homepage": "http://github.com/netlabspl/NetLabsSMSGatewayBundle",
+    "license": "MIT and Apache-2.0",
+    "authors": [
+        {
+            "name": "Michał Jabłoński",
+            "email": "m.jablonski@net-labs.pl",
+            "role": "Author"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": ">=2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "NetLabs\\SMSGatewayBundle": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

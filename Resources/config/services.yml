@@ -1,0 +1,7 @@
+parameters:
+    net_labs_sms.class: NetLabs\SMSGatewayBundle\Service\Connector
+
+services:
+    net_labs_sms:
+        class: %net_labs_sms.class%
+        arguments: [@service_container]
