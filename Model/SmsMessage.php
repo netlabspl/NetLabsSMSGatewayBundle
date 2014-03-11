@@ -33,7 +33,7 @@ class SmsMessage
 
     private $sendAt;
 
-    private $usmsid;
+    private $identifier;
 
     public function __toString()
     {
@@ -201,26 +201,6 @@ class SmsMessage
     }
 
     /**
-     * @param mixed $usmsid
-     *
-     * @return $this
-     */
-    public function setUsmsid($usmsid)
-    {
-        $this->usmsid = $usmsid;
-
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getUsmsid()
-    {
-        return $this->usmsid;
-    }
-
-    /**
      * @param mixed $senderName
      *
      * @return $this
@@ -238,5 +218,25 @@ class SmsMessage
     public function getSenderName()
     {
         return $this->senderName;
+    }
+
+    /**
+     * @param mixed $identifier
+     *
+     * @return $this
+     */
+    public function setIdentifier($identifier)
+    {
+        $this->identifier = $identifier;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIdentifier()
+    {
+        return $this->identifier;
     }
 }

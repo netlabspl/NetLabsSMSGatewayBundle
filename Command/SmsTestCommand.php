@@ -46,7 +46,7 @@ class SmsTestCommand extends ContainerAwareCommand
         $message = $smsService->compose()
             ->setReceiver($input->getArgument('phone-number'))
             ->setContent($input->getArgument('message'))
-            ->setUsmsid(uniqid());
+            ->setIdentifier(uniqid());
 
         if ($input->getArgument('senderName')) {
             $message->setSenderName($input->getArgument('senderName'));

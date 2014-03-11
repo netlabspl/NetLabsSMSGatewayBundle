@@ -147,8 +147,8 @@ class Connector
             $params['data_wysylki'] = $message->getSendAt()->format('Y-m-d H:i:s');
         }
 
-        if ($message->getUsmsid()) {
-            $params['usmsid'] = $message->getUsmsid();
+        if ($message->getIdentifier()) {
+            $params['usmsid'] = $message->getIdentifier();
         }
 
         $response = $this->apiCall("wyslij_sms", $params);
@@ -171,13 +171,13 @@ class Connector
      * @param \DateTime $startDate Start date (must be provided with endDate)
      * @param \DateTime $endDate End date (must be provided with startDate)
      * @param string $smsId SMS ID
-     * @param string $usmsid Message custom identifier
+     * @param string $identifier Message custom identifier
      *
      * @throws \Exception
      *
      * @return array The array of retrieved reports
      */
-    public function getReports($number = null, $startDate = null, $endDate = null, $smsId = null, $usmsid = null)
+    public function getReports($number = null, $startDate = null, $endDate = null, $smsId = null, $identifier = null)
     {
         $parameters = array();
 
@@ -201,8 +201,8 @@ class Connector
             $parameters['smsid'] = $smsId;
         }
 
-        if ($usmsid) {
-            $parameters['usmsid'] = $usmsid;
+        if ($identifier) {
+            $parameters['usmsid'] = $identifier;
         }
 
         $response = $this->apiCall("sprawdz_sms", $parameters);
