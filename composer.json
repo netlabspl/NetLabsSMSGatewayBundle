@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "NetLabs\\SMSGatewayBundle": ""
+            "NetLabs\\SMSGatewayBundle\\": ""
         }
     }
 }
