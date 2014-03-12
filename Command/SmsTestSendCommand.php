@@ -17,7 +17,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 /**
  * @author Michał Jabłoński <m.jablonski@net-labs.pl>
  */
-class SmsTestCommand extends ContainerAwareCommand
+class SmsTestSendCommand extends ContainerAwareCommand
 {
     /**
      * @see Command
@@ -25,7 +25,7 @@ class SmsTestCommand extends ContainerAwareCommand
     protected function configure()
     {
         $this
-            ->setName('sms:test')
+            ->setName('sms:test:send')
             ->setDescription('Sends test SMS message')
             ->addArgument('phone-number', InputArgument::REQUIRED, "Receiver's phone number")
             ->addArgument('message', InputArgument::REQUIRED, 'Message')
@@ -40,7 +40,6 @@ class SmsTestCommand extends ContainerAwareCommand
         $output->writeln('Sending test message...');
 
         $smsService = $this->getContainer()->get('net_labs_sms');
-
         $smsService->setIsTest(true);
 
         $message = $smsService->compose()
@@ -53,17 +52,6 @@ class SmsTestCommand extends ContainerAwareCommand
         }
 
         $result = $smsService->send($message);
-
-//        $result = $smsService->receive(false);
-
-//        $result = $smsService->getReport(null, null, null, 'e9fd98eb96');
-//        $result = $smsService->getReport(null, null, null, null, 'testId1');
-
-//        $result = $smsService->getCounters();
-
-//        $result = $smsService->getSenderName();
-
-//        $result = $smsService->hlr($input->getArgument('phone-number'));
 
         var_dump($result);
     }
