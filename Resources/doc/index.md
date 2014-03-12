@@ -25,7 +25,7 @@ new NetLabs\SMSGatewayBundle\NetLabsSMSGatewayBundle()
 * app/config/config.yml
 
 ```yaml
-net_labs_sms:
+net_labs_sms_gateway:
     api:
         username: testuser
         password: testpassword
