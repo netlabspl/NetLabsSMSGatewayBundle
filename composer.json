@@ -1,8 +1,8 @@
 {
     "name": "netlabs/sms-gateway-bundle",
     "type": "symfony-bundle",
-    "description": "",
-    "keywords": ["sms", "netlabs"],
+    "description": "SMS Gateway for serwersms.pl API",
+    "keywords": ["sms", "netlabs", "serwersms"],
     "homepage": "http://github.com/netlabspl/NetLabsSMSGatewayBundle",
     "license": "MIT and Apache-2.0",
     "authors": [
