@@ -1,6 +1,8 @@
 # NetLabsSMSGatewayBundle
 ---
 
+SMS Gateway for serwersms.pl API
+
 ## Installation
 ---
 
@@ -26,6 +28,7 @@ new NetLabs\SMSGatewayBundle\NetLabsSMSGatewayBundle()
 
 ```yaml
 net_labs_sms_gateway:
+    # serwersms.pl
     api:
         username: testuser
         password: testpassword
